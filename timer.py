@@ -69,11 +69,11 @@ if __name__ == "__main__":
         break_time = int(input("Enter short break duration (5 minutes is the defualt): ") or 5)
         long_break_time = int(input("Enter long break duration (15 minutes is the defalut): ") or 15)
         number_of_sessions = int(input("Enter number of work sessions (default is 4): ") or 4)
-        sound_file_path = input("Enter path to sound file (Put it in the root of this folder. Leave as is if you dont want a custom sound. WAV ONLY!): ") or "alarm.wav"
+        sound_path = input("Enter path to sound file (Put it in the root of this folder. Leave as is and press enter if you dont want a custom sound. WAV ONLY!): ") or "alarm.wav"
 
-        pomodoro_timer(work_time, break_time, long_break_time, number_of_sessions, sound_file_path)
+        pomodoro_timer(work_time, break_time, long_break_time, number_of_sessions, sound_path)
 
     except ValueError:
         print("Invalid input. PLease check the numbers.")
-    except KeyboardInterrupt:
+    except KeyboardPress:
         print("\nTimer interrupted.")
